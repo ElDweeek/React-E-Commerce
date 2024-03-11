@@ -1,0 +1,89 @@
+.footer {
+  margin-top: auto;
+  background: linear-gradient(to left top, var(--Tan), var(--Beige), var(--Tan));
+  padding-top: 20px;
+  color: var(--Black-brown);
+}
+
+h3 {
+  font-weight: 700;
+}
+
+.footer .footLogo {
+  margin-bottom: 15px;
+
+  & img {
+    width: 81.8181818181818182%;
+    margin-bottom: 20px;
+  }
+
+  & p {
+    margin: 0 0 0 15px;
+    line-height: 1.8;
+    font-weight: bold;
+    font-style: italic;
+  }
+}
+
+.footer .container .links ul li {
+  list-style: none;
+  margin-bottom: 10px;
+
+  & a {
+    text-decoration: none;
+    color: var(--Black-brown);
+    font-weight: bold;
+
+    &:hover {
+      color: var(--Dark-petroleum);
+    }
+  }
+}
+
+.footer .get-in-touch {
+
+  & .contact {
+    margin-bottom: 20px;
+    margin-left: 15px;
+  }
+
+  & a {
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 15px;
+    color: var(--Black-brown);
+
+    & svg {
+      font-size: 24px;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+
+    &:hover {
+      color: var(--Dark-petroleum);
+    }
+  }
+
+}
+
+.footer .last-word {
+  background-color: var(--Black-brown);
+  color: var(--Beige);
+
+  & p {
+    margin: 15px auto 15px;
+
+    & span {
+      color: var(--Tan);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .footer .last-word p {
+    text-align: center;
+    margin: 15px 25px 15px;
+  }
+}

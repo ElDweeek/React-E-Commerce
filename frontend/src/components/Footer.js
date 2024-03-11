@@ -1,10 +1,12 @@
+import '../Css/Ffooter.css'
+import FootLogo from '../images/FootLogo.png'
 const Footer = () => {
-    return (
-      <div className="footer">
+  return (
+    <div className="footer">
       <div className="container">
         <div className="row">
           <div className="footLogo col-lg-3 col-12 ">
-            <img className="w-lg-100" src="./imgs/FootLogo.png" alt="" />
+            <img className="w-lg-100" src={FootLogo} alt="" />
             <p>
               We really belive that good book Store is not just about selling books,
               but reaching out into the world and making a difference.
@@ -82,9 +84,9 @@ const Footer = () => {
         </div>
       </div>
     </div>
-    
-    )
-  }
+
+  )
+}
 
 
 export default Footer;
