@@ -1,8 +1,9 @@
 import axios from "axios"
+import { apiUrl } from "./apiConfig"
 
 
 const engProductsApi = async () => {
-  const response = await axios.get("http://localhost:4000/engProducts")
+  const response = await axios.get(`${apiUrl}/engProducts`)
   return response.data
 }
 

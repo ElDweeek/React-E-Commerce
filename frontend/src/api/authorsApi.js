@@ -1,8 +1,9 @@
 import axios from "axios"
+import { apiUrl } from "./apiConfig"
 
 
 const authorsApi = async () => {
-  const response = await axios.get("http://localhost:4000/authors")
+  const response = await axios.get(`${apiUrl}/authors`)
   console.log(response.data)
   return response.data
 }

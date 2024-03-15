@@ -1,16 +1,42 @@
-import arProductsApi from '../api/arProducts';
-import authorsApi from '../api/authors';
-import engProductsApi from '../api/engProducts';
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 import Rating from '../components/Rating';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 
 
-const HomeScreen = async () => {
 
-const authors = authorsApi();
-const engProducts = engProductsApi();
-const arProducts = arProductsApi();
+
+
+const HomeScreen = () => {
+  const [authors, setAuthors] = useState([]);
+  const [arProducts, setArProducts] = useState([]);
+  const [engProducts, setEngProducts] = useState([]);
+  useEffect(() => {
+    const authors = async () => {
+      const response = await axios.get("http://localhost:4000/authors")
+      setAuthors(response.data)
+    }
+    authors()
+
+  }, [])
+  useEffect(() => {
+    const arProducts = async () => {
+      const response = await axios.get("http://localhost:4000/arProducts")
+      setArProducts(response.data)
+    }
+    arProducts()
+  }, [])
+  useEffect(() => {
+    const engProducts = async () => {
+      const response = await axios.get("http://localhost:4000/engProducts")
+      setEngProducts(response.data)
+    }
+    engProducts()
+  }, [])
   return (
     <>
+
       <main>
         <div className="landing d-flex justify-content-center align-items-center">
           <div className="container text-center">
@@ -33,7 +59,7 @@ const arProducts = arProductsApi();
             </div>
             <ul id="slider" className="authors slider container">
               {authors.map((authors) =>
-                <li className={"section"+(authors.class)+"row"}>
+                <li className={"section" + (authors.class) + "row"}>
                   <span>
                     {authors.title}
                   </span>
@@ -75,10 +101,10 @@ const arProducts = arProductsApi();
             </ul>
             <div className="control container">
               <span id="prev" className="prev">
-                <i className="fa-solid fa-chevron-left" />
+                <FontAwesomeIcon icon={faAngleLeft} />
               </span>
               <span id="next" className="next">
-                <i className="fa-solid fa-chevron-right" />
+                <FontAwesomeIcon icon={faAngleRight} />
               </span>
             </div>
           </div>
@@ -123,16 +149,16 @@ const arProducts = arProductsApi();
                   <li>
                     <div className="box">
                       <div className="box-img">
-                        <a href={"/#/info/"+(engProducts._id)} draggable="false">
+                        <a href={"/#/info/" + (engProducts._id)} draggable="false">
                           <img
-                            src="{engProducts.image}"
-                            alt="{engProducts.name}"
+                            src={engProducts.image}
+                            alt={engProducts.name}
                             draggable="false"
                           />
                         </a>
                       </div>
                       <div className="box-content">
-                        <a href={"/#/info/"+(engProducts._id)} draggable="false">
+                        <a href={"/#/info/" + (engProducts._id)} draggable="false">
                           <h5>
                             {engProducts.name}
                           </h5>
@@ -158,10 +184,10 @@ const arProducts = arProductsApi();
                 )}
               </ul>
               <span className="books-btn" id="engLeft">
-                <i className="fa fa-angle-left" aria-hidden="true" />
+                <FontAwesomeIcon icon={faAngleLeft} aria-hidden="true" />
               </span>
               <span className="books-btn" id="engRight">
-                <i className="fa fa-angle-right" aria-hidden="true" />
+                <FontAwesomeIcon icon={faAngleRight} aria-hidden="true" />
               </span>
             </div>
             <h2 className="text-center mt-5">Arabic Books</h2>
@@ -171,7 +197,7 @@ const arProducts = arProductsApi();
                   <li>
                     <div className="box">
                       <div className="box-img">
-                        <a href={"/#/info/"+(arProducts._id)} draggable="false">
+                        <a href={"/#/info/" + (arProducts._id)} draggable="false">
                           <img
                             src={arProducts.image}
                             alt={arProducts.name}
@@ -180,14 +206,14 @@ const arProducts = arProductsApi();
                         </a>
                       </div>
                       <div className="img-content">
-                        <a href={"/#/info/"+(arProducts._id)} draggable="false">
+                        <a href={"/#/info/" + (arProducts._id)} draggable="false">
                           <h5>
                             {arProducts.name}
                           </h5>
                         </a>
                         <div className="book-rating">
                           <span>
-                            {Rating.render({ value: arProducts.rating })
+                            {Rating({ value: arProducts.rating })
                             }
                           </span>
                           <span>
@@ -205,24 +231,22 @@ const arProducts = arProductsApi();
                   </li>
                 )}
               </ul>
-              <span className="books-btn" id="arLeft">
-                <i className="fa fa-angle-left" aria-hidden="true" />
+              <span className="books-btn" id="engLeft">
+                <FontAwesomeIcon icon={faAngleLeft} aria-hidden="true" />
               </span>
-              <span className="books-btn" id="arRight">
-                <i className="fa fa-angle-right" aria-hidden="true" />
+              <span className="books-btn" id="engRight">
+                <FontAwesomeIcon icon={faAngleRight} aria-hidden="true" />
               </span>
             </div>
           </div>
         </div>
       </main>
 
+
+
     </>
 
-
-
   )
-
 }
-
 
 export default HomeScreen;
