@@ -3,13 +3,17 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import React from 'react'
 import NavLogo from '../images/NavLogo.png'
 
-export const Nav = () => {
+
+import '../Css/nav.css'
+
+
+const Nav = () => {
   return (
     <>
       <nav className="navbar navbar-expand-lg sticky-top">
         <div className="container">
           <div className="nav-logo">
-            <a className="navbar-brand" href="/#/">
+            <a className="navbar-brand" href="/">
               <img src={NavLogo} alt="Logo" />
             </a>
           </div>
@@ -35,7 +39,7 @@ export const Nav = () => {
                 />
               </li>
               <li className="nav-item">
-                <a className="nav-link m-1 p-2 p-lg-3" aria-current="page" href="/#/">
+                <a className="nav-link m-1 p-2 p-lg-3" aria-current="page" href="/">
                   Home
                 </a>
               </li>
@@ -43,7 +47,7 @@ export const Nav = () => {
                 <a
                   className="nav-link m-1 p-2 p-lg-3 "
                   aria-current="page"
-                  href="/#/authors"
+                  href="/authors"
                 >
                   Authors
                 </a>
@@ -52,7 +56,7 @@ export const Nav = () => {
                 <a
                   className="nav-link m-1 p-2 p-lg-3 "
                   aria-current="page"
-                  href="/#/books"
+                  href="/books"
                 >
                   Books
                 </a>
@@ -61,7 +65,7 @@ export const Nav = () => {
                 <a
                   className="nav-link m-1 p-2 p-lg-3 "
                   aria-current="page"
-                  href="/#/about"
+                  href="/about"
                 >
                   About
                 </a>
@@ -70,9 +74,9 @@ export const Nav = () => {
                 <a
                   className="nav-link m-1 p-2 p-lg-3 "
                   aria-current="page"
-                  href="/#/contact"
+                  href="/contact"
                 >
-                  Contact
+                  Contact Us
                 </a>
               </li>
             </ul>
@@ -85,7 +89,7 @@ export const Nav = () => {
                 type="text"
                 id="desk-search"
                 placeholder="Author / Book"
-                autofocus=""
+                autoFocus=""
               />
             </div>
             
@@ -100,3 +104,6 @@ export const Nav = () => {
     </>
   )
 }
+
+
+export default Nav;

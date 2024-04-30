@@ -1,11 +1,10 @@
+import React from "react";
 
-
-const BooksScreen = {
-  render: () => {
-    return `
-    <div class="books-screen">Books Screen</div>
-    `
-  },
-  after_render: () => {}
+const BooksScreen = () => {
+  return (
+    <>
+    <h1>Books Screen</h1>
+    </>
+  )
 };
 export default BooksScreen;

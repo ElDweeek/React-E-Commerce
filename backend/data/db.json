@@ -37,7 +37,7 @@
       "image1": "../images/authors/fr1.jpg",
       "name2": "Émile Zola",
       "snapshot2": "Émile Zola wrote a huge number of books and short stories. He was nominated for the Nobel Prize in Literature, with some of his must-read works including Germinal And Thérèse Raquin.",
-      "image2": "./imgs/authors/fr2.jpg",
+      "image2": "../images/authors/fr2.jpg",
       "name3": "victor hugo",
       "snapshot3": "Having strongly contributed to the renewal of poetry and theater and having marked his era by his political and social positions, Victor Hugo is still celebrated today, in France and abroad.",
       "image3": "../images/authors/fr3.jpg"

@@ -1,11 +1,12 @@
+import React from "react";
 
-
-const AboutScreen = {
-  render: () => {
-    return `
+const AboutScreen = () => {
+  return (
+    <>
     <div class="about-screen">About Screen</div>
-    `
-  },
-  after_render: () => {}
+    </>
+    )
+    
+  
 };
 export default AboutScreen;

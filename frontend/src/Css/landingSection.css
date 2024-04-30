@@ -1,0 +1,47 @@
+.landing {
+  position: relative;
+  height: calc(100vh - 91px);
+  /*91px is the height of Nav*/
+  background-color: var(--Beige);
+
+  & h3 {
+    color: var(--Black-brown);
+    font-weight: bold;
+
+    & span {
+      color: var(--Dark-petroleum);
+    }
+  }
+
+  & h3::after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 30%;
+    background-color: var(--Black-brown);
+    margin-top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  & p {
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 2;
+    color: #444;
+  }
+}
+
+.btn {
+  background-color: var(--Black-brown);
+  color: var(--Beige);
+  font-size: 18px;
+  font-weight: bold;
+
+  &:hover {
+    background-color: var(--Dark-petroleum);
+    color: white;
+  }
+}

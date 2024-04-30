@@ -1,11 +1,23 @@
 // import NavBar from './components/NavBar'
-import Footer from './components/Footer';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import  Nav  from './components/Nav';
+import Footer from './components/Footer';
 import HomeScreen from './Pages/HomeScreen';
-import authorsApi from './api/authorsApi'
-import engProductsApi from './api/engProductsApi'
-import arProductsApi from './api/arProductsApi'
-import { Nav } from './components/Nav';
+import AboutScreen from './Pages/AboutScreen';
+import AuthorsScreen from './Pages/AuthorsScreen';
+import BooksScreen from './Pages/BooksScreen';
+import CartScreen from './Pages/CartScreen';
+import ContactUsScreen from './Pages/ContactUsScreen';
+import DashboardScreen from './Pages/DashboardScreen';
+import Error404Screen from './Pages/Error404Screen';
+import InfoScreen from './Pages/InfoScreen';
+import OrderScreen from './Pages/OrderScreen';
+import PaymentScreen from './Pages/PaymentScreen';
+import PlaceOrderScreen from './Pages/PlaceOrderScreen';
+import ProfileScreen from './Pages/ProfileScreen';
+import RegisterScreen from './Pages/RegisterScreen';
+import ShippingScreen from './Pages/ShippingScreen';
+import SignInScreen from './Pages/SingInScreen';
 
 
 
@@ -14,7 +26,69 @@ function App() {
     {
       path: "/",
       element: <HomeScreen />,
-      loader:authorsApi,engProductsApi,arProductsApi,
+    },
+    {
+      path: "/about",
+      element: <AboutScreen />,
+    },
+    {
+      path: "/authors",
+      element: <AuthorsScreen />,
+    },
+    {
+      path: "/books",
+      element: <BooksScreen />,
+    },
+    {
+      path: "/cart",
+      element: <CartScreen />,
+    },
+  
+    {
+      path: "/contact",
+      element: <ContactUsScreen />,
+    },
+    {
+      path: "/dashboard",
+      element: <DashboardScreen />,
+    },
+    {
+      path: "/error404",
+      element: <Error404Screen />,
+    },
+  
+    {
+      path: "/info",
+      element: <InfoScreen />,
+    },
+    {
+      path: "/order",
+      element: <OrderScreen />,
+    },
+    {
+      path: "/payment",
+      element: <PaymentScreen />,
+    },
+    {
+      path: "/placeorder",
+      element: <PlaceOrderScreen />,
+    },
+  
+    {
+      path: "/profile",
+      element: <ProfileScreen />,
+    },
+    {
+      path: "/register",
+      element: <RegisterScreen />,
+    },
+    {
+      path: "/shipping",
+      element: <ShippingScreen />,
+    },
+    {
+      path: "/signin",
+      element: <SignInScreen />,
     },
   
   ]);
