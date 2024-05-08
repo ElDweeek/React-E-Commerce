@@ -117,7 +117,7 @@ const addToCart = (item, forceUpdate = false) => {
                   $${item.price}
                 </div>
             </li>
-              `).join('\n')
+              `)
               }
             </ul>
           </div>

@@ -1,5 +1,7 @@
-// import NavBar from './components/NavBar'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
+
+// import NavBar from './components/NavBar'
 import  Nav  from './components/Nav';
 import Footer from './components/Footer';
 import HomeScreen from './Pages/HomeScreen';

@@ -1,27 +1,30 @@
+import React from "react";
+
 import { getOrder } from "../api";
 import { parseRequestUrl } from "../utils";
 
 
 
-const OrderScreen = {
-  render: async () => {
-    const request = parseRequestUrl();
-    const {
-      _id,
-      shipping,
-      payment,
-      orderItems,
-      itemsPrice,
-      shippingPrice,
-      taxPrice,
-      totalPrice,
-      isDelivered,
-      deliveredAt,
-      isPaid,
-      paidAt,
-    } = await getOrder(request.id)
+const OrderScreen = async () => {
+  // render: async () => {
+  const request = parseRequestUrl();
+  const {
+    _id,
+    shipping,
+    payment,
+    orderItems,
+    itemsPrice,
+    shippingPrice,
+    taxPrice,
+    totalPrice,
+    isDelivered,
+    deliveredAt,
+    isPaid,
+    paidAt,
+  } = await getOrder(request.id)
 
-    return (
+  return (
+    <>
       <div className="placeOrder-screen">
         <h3 className="ms-5">Order : {_id}</h3>
         <div className="container">
@@ -66,7 +69,7 @@ const OrderScreen = {
                         </div>
                         <div className="cart-name">
                           <div>
-                            <a href={"/product/"+item.product}>{item.name}</a>
+                            <a href={"/product/" + item.product}>{item.name}</a>
                           </div>
                           <div>
                             Qty: {item.qty}
@@ -79,8 +82,8 @@ const OrderScreen = {
                       <hr />
                     </li>
                   )
-                
-              }
+
+                  }
                 </ul>
               </div>
 
@@ -110,14 +113,11 @@ const OrderScreen = {
 
         </div>
       </div>
-    )
-  }
+    </>
 
-
-
-
-
-
+  )
 }
+
+
 
 export default OrderScreen;

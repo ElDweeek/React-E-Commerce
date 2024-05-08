@@ -17,28 +17,28 @@ const Authors = () => {
           </div>
           <Carousel id="slider" className="authors slider container">
             {authors.map((author) => (
-              <Carousel.Item className={"section" + author.class + " row"} key={author.id}>
-                <span id='title-heading'>{author.title}</span>
+              <Carousel.Item  key={author.id}>
+                <span className={`section ${author.class} row`} id='title-heading'>{author.title}</span>
                 <Row>
                   <Col lg={4} md={6}>
-                    <img src={author.image1} alt="" draggable="false" style={{ width: "100%", height: "245px" }} />
+                    <img src={author.image1} alt="" draggable="false"/>
                     <div className="text">
                       <h5>{author.name1}</h5>
-                      <p>{author.snapshot1}</p>
+                      <p>{author.snapshot1.slice(0,200)}</p>
                     </div>
                   </Col>
                   <Col lg={4} md={6}>
-                    <img src={author.image2} alt="" draggable="false" style={{ width: "100%", height: "245px" }} />
+                    <img src={author.image2} alt="" draggable="false"/>
                     <div className="text">
                       <h5>{author.name2}</h5>
-                      <p>{author.snapshot2}</p>
+                      <p>{author.snapshot2.slice(0,200)}</p>
                     </div>
                   </Col>
                   <Col lg={4} md={6}>
-                    <img src={author.image3} alt="" draggable="false" style={{ width: "100%", height: "245px" }} />
+                    <img src={author.image3} alt="" draggable="false"/>
                     <div className="text">
                       <h5>{author.name3}</h5>
-                      <p>{author.snapshot3}</p>
+                      <p>{author.snapshot3.slice(0,200)}</p>
                     </div>
                   </Col>
                 </Row>

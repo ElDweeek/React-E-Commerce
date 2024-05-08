@@ -34,7 +34,7 @@
     gap: 16px;
     background: linear-gradient(to left top, var(--Tan), var(--Beige), var(--Tan));
     overflow-x: auto;
-    height: 380px;
+    height: 400px;
     box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.16), 6px 6px 6px rgba(0, 0, 0, 0.23);
     cursor: pointer;
     scroll-snap-type: x mandatory;

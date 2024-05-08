@@ -19,7 +19,7 @@ const EngProducts = () => {
             <li key={engProducts.id}>
               <div className="box">
                 <div className="box-img">
-                  <a href={"/#/info/" + (engProducts._id)} draggable="false">
+                  <a href={"/info/" + (engProducts.id)} draggable="false">
                     <img
                       src={engProducts.image}
                       alt={engProducts.name}
@@ -28,15 +28,14 @@ const EngProducts = () => {
                   </a>
                 </div>
                 <div className="box-content">
-                  <a href={"/#/info/" + (engProducts._id)} draggable="false">
+                  <a href={"/info/" + (engProducts.id)} draggable="false">
                     <h5>
                       {engProducts.name}
                     </h5>
                   </a>
                   <div className="book-rating">
                     <span>
-                      {Rating({ value: engProducts.rating })
-                      }
+                      {Rating({ value: engProducts.rating })}
                     </span>
                     <span>
                       {engProducts.numReview + " reviews"}
@@ -45,7 +44,7 @@ const EngProducts = () => {
                   <p>
                     Price:
                     <span>
-                      $ {engProducts.price}
+                      {engProducts.price} $
                     </span>
                   </p>
                 </div>

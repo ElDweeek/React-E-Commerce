@@ -3,7 +3,7 @@ import React from "react";
 const AboutScreen = () => {
   return (
     <>
-    <div class="about-screen">About Screen</div>
+    <h1>About Screen</h1>
     </>
     )
     

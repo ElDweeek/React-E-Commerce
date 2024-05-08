@@ -1,7 +1,7 @@
 {
   "authors": [
     {
-      "_id": "a",
+      "id": "a",
       "class": "engSlide",
       "title": "Top English Authors",
       "name1": "John Milton",
@@ -50,7 +50,7 @@
       "image": "../images/Books/eng1.jpg",
       "price": 11.75,
       "numReview": 543,
-      "rating": 5,
+      "rating": 2,
       "countInStock": 0,
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit."
     },
@@ -60,7 +60,7 @@
       "image": "../images/Books/eng1.jpg",
       "price": 8.75,
       "numReview": 543,
-      "rating": 4.5,
+      "rating":3,
       "countInStock": 2,
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit."
     },
@@ -70,7 +70,7 @@
       "image": "../images/Books/eng1.jpg",
       "price": 8.75,
       "numReview": 543,
-      "rating": 4.5,
+      "rating": 4,
       "countInStock": 15,
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit."
     },
@@ -80,7 +80,7 @@
       "image": "../images/Books/eng1.jpg",
       "price": 7.75,
       "numReview": 543,
-      "rating": 4.5,
+      "rating": 3.5,
       "countInStock": 15,
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit."
     },
@@ -90,7 +90,7 @@
       "image": "../images/Books/eng1.jpg",
       "price": 5.75,
       "numReview": 543,
-      "rating": 4.5,
+      "rating": 2.5,
       "countInStock": 15,
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit."
     },
@@ -100,7 +100,7 @@
       "image": "../images/Books/eng1.jpg",
       "price": 6.75,
       "numReview": 543,
-      "rating": 4.5,
+      "rating": 3.5,
       "countInStock": 15,
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit."
     },
@@ -120,7 +120,7 @@
       "image": "../images/Books/eng1.jpg",
       "price": 3.75,
       "numReview": 543,
-      "rating": 4.5,
+      "rating": 2.5,
       "countInStock": 15,
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit."
     },
@@ -130,7 +130,7 @@
       "image": "../images/Books/eng1.jpg",
       "price": 5.75,
       "numReview": 543,
-      "rating": 4.5,
+      "rating": 3,
       "countInStock": 15,
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit."
     },
@@ -140,7 +140,7 @@
       "image": "../images/Books/eng1.jpg",
       "price": 8,
       "numReview": 543,
-      "rating": 4.5,
+      "rating": 4,
       "countInStock": 15,
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit."
     }
