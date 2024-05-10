@@ -1,22 +1,45 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import Rating from '../components/Rating';
 import { useFetch } from '../hooks/useFetch';
 
 
-import { Navigation, EffectCoverflow } from 'swiper/modules';
+import { Navigation, EffectCoverflow, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import { useEffect, useState } from 'react';
 
 
 const ArProducts = () => {
 
   const arProducts = useFetch('http://localhost:4000/arProducts');
 
+      
+  const [slidesPerView, setSlidesPerView] = useState(5);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 480) {
+        setSlidesPerView(1.45); 
+      } else if (window.innerWidth <= 768) {
+        setSlidesPerView(2); // Mobile screen
+      } else if (window.innerWidth <= 1200) {
+        setSlidesPerView(3.5); // Lower width
+      } else {
+        setSlidesPerView(5); // Default
+      }
+    };
+
+    handleResize(); // Set initial value
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   return (
 
     <>
@@ -27,7 +50,11 @@ const ArProducts = () => {
         grabCursor={true}
         centeredSlides={true}
         loop={true}
-        slidesPerView={5}
+        slidesPerView={slidesPerView}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
@@ -39,7 +66,7 @@ const ArProducts = () => {
           prevEl: '.swiper-prev-btn',
           clickable: true
         }}
-        modules={[EffectCoverflow, Navigation]}
+        modules={[EffectCoverflow, Navigation,Autoplay]}
       >
         {arProducts.map((arProducts) =>
           <SwiperSlide key={arProducts.id} id='swiper-slide'>

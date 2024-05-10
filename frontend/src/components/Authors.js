@@ -3,6 +3,8 @@ import React from 'react';
 import { Container, Row, Col, Carousel } from 'react-bootstrap';
 
 import '../Css/authors.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBookBookmark } from '@fortawesome/free-solid-svg-icons';
 
 const Authors = () => {
   const authors = useFetch('http://localhost:4000/authors');
@@ -13,7 +15,9 @@ const Authors = () => {
       <div className="authors">
         <Container>
           <div className="heading text-center">
-            <h1>Authors</h1>
+            <h1>Authors
+          <FontAwesomeIcon icon={faBookBookmark} className="book-svg"/>
+            </h1>
           </div>
           <Carousel id="slider" className="authors slider container">
             {authors.map((author) => (

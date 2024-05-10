@@ -13,7 +13,7 @@
     margin-bottom: 50px;
     text-transform: uppercase;
 
-    &::before {
+    & .book-svg {
       background-color: var(--Pistachio);
     }
   }
@@ -161,3 +161,10 @@
 } */
 
 
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+color: red !important;
+background-color: var(--Black-brown);
+padding: 20px;
+border-radius: 50%;
+}

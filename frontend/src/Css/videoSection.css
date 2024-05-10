@@ -39,6 +39,16 @@
       opacity: .7;
     }
   }
+  .btn {
+    background-color: var(--Black-brown);
+    color: var(--Beige);
+    font-size: 14px;
+    font-weight: bold;
+  
+    &:hover {
+      background-color: var(--Dark-petroleum);
+      color: white;
+    }}
 }
 
 @media (max-width: 767px) {

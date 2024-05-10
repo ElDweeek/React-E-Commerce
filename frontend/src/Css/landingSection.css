@@ -32,16 +32,17 @@
     line-height: 2;
     color: #444;
   }
-}
 
-.btn {
-  background-color: var(--Black-brown);
-  color: var(--Beige);
-  font-size: 18px;
-  font-weight: bold;
+  & .btn {
+    background-color: var(--Black-brown);
+    color: var(--Beige);
+    font-size: 18px;
+    font-weight: bold;
 
-  &:hover {
-    background-color: var(--Dark-petroleum);
-    color: white;
+    &:hover {
+      background-color: var(--Dark-petroleum);
+      color: white;
+    }
   }
+
 }
